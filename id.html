@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="id" >
+        <div style="width: 5.5cm;">
+          <img src="/images/1.png" style="width: 100%;" alt="">
+        </div>
+        <div style="width: 5.5cm;">
+          <img src="/images/2.png" style="width: 100%;" alt="">
+        </div>
+    </div>
+    <script>
+      window.addEventListener('afterprint', () => {
+        console.log('triggered');
+      })
+
+    </script>
+</body>
+<style>
+@media print {
+  .id {
+    width: 5.5cm; /* Set the desired width */
+    height: 9.5cm; /* Set the desired height */
+  }
+}
+.id{
+    width: 11.1cm; /* Set the desired width */
+    height: 9.5cm;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+</style>
+</html>
